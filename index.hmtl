@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="icon" type="image/x-icon" href="./assets/Logo_circular_com_crisalis.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio Crisalis</title>
+  <style>
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+            position: relative; 
+        }
+        .logo img {
+            transition: transform 0.7s ease; 
+        }
+        .logo img:hover {
+            transform: scale(1.2); 
+        }
+        body {
+            flex-direction: column;
+            background-color: #EFF6E0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contatos{
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-wrapper{
+            height: 70px;
+            width: 70px;
+            overflow: hidden;
+            border-radius: 50%;
+            box-shadow: 
+            0px 1px 1px 0px rgba(0, 0, 0, 0.1),
+            0px 2px 2px 0px rgba(0, 0, 0, 0.09),
+            0px 5px 3px 0px rgba(0, 0, 0, 0.05),
+            0px 9px 4px 0px rgba(0, 0, 0, 0.01),
+            0px 15px 4px 0px rgba(0, 0, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contato-icon{
+            height: auto;
+            width: 70%;
+        }
+        .logo-image {
+            height: 80%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+  </style>
+</head>
+<body>
+  <div class="logo"> <!-- flex -->
+    <div class="logo-image"> <!-- flex -->
+      <img src="./assets/Logo_circular_com_crisalis.svg" width="80%" height="80%">
+    </div>
+  </div>
+  <div class="contatos"> <!-- flex -->
+    <a href="https://www.instagram.com/studiocrisalis" target="_blank">
+      <div class="img-wrapper"> <!-- flex -->
+        <img class="contato-icon" src="assets\3225191_app_instagram_logo_media_popular_icon.png">
+      </div>
+    </a>
+    <a href="https://api.whatsapp.com/send?phone=5531982669454&text=Ol%C3%A1%2C%20mais%20sobre%20os%20servi%C3%A7os%20da%20Crisalis.%20✨%20" target="_blank">
+      <div class="img-wrapper"> <!-- flex -->
+        <img class="contato-icon" src="assets\3225179_app_logo_media_popular_social_icon.png">
+      </div>
+    </a>
+  </div>
+</body>
+</html>

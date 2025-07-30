@@ -1,91 +1,199 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <link rel="icon" type="image/x-icon" href="./assets/Logo_circular_com_crisalis.ico">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Studio Crisalis</title>
+  <link rel="icon" type="image/x-icon" href="./assets/Logo_circular_com_crisalis.ico">
   <style>
-* {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        .logo {
-            display: flex;
-            justify-content: center;
-            height: 100%;
-            flex-direction: column;
-            align-items: center;
-            position: relative; 
-        }
-        .logo img {
-            transition: transform 0.7s ease; 
-        }
-        .logo img:hover {
-            transform: scale(1.2); 
-        }
-        body {
-            flex-direction: column;
-            background-color: #EFF6E0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .contatos{
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-            align-items: center;
-        }
-        .img-wrapper{
-            height: 70px;
-            width: 70px;
-            overflow: hidden;
-            border-radius: 50%;
-            box-shadow: 
-            0px 1px 1px 0px rgba(0, 0, 0, 0.1),
-            0px 2px 2px 0px rgba(0, 0, 0, 0.09),
-            0px 5px 3px 0px rgba(0, 0, 0, 0.05),
-            0px 9px 4px 0px rgba(0, 0, 0, 0.01),
-            0px 15px 4px 0px rgba(0, 0, 0, 0);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .contato-icon{
-            height: auto;
-            width: 70%;
-        }
-        .logo-image {
-            height: 80%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    @font-face {
+        font-family: 'Gibson Light';
+        src: url('./fonts/gibson-light.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+    body {
+      background: linear-gradient(to bottom, #f3f8e5, #dde8c2);
+      color: #3a4b3f;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 20px 40px;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #3a4b3f;
+    }
+
+    nav a {
+      color: #3a4b3f;
+      font-weight: bold;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #6a8c7a;
+    }
+
+    .hero {
+      min-height: 80vh;
+      padding-top: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 120px 20px 40px;
+    }
+
+    .hero img {
+      width: 500px;
+      max-width: 80%;
+      margin-bottom: 30px;
+      transition: transform 0.6s ease;
+    }
+
+    .hero img:hover {
+      transform: scale(1.1);
+    }
+
+    .hero h2 {
+      font-size: 30px;
+      color: #3a4b3f;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .contatos {
+      margin-top: 40px;
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .contatos a {
+  color: inherit;           
+  text-decoration: none;    
+}
+
+.contatos a:hover {
+  color: #6a8c7a;          
+}
+
+
+    .img-wrapper {
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    .img-wrapper:hover {
+      transform: scale(1.1);
+    }
+
+    .contato-icon {
+      width: 70%;
+      height: auto;
+      padding-top: 28px;
+    }
+
+    footer {
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      background-color: #f5f9ea;
+      padding: 80px 80px;
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 24px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .img-wrapper {
+        height: 60px;
+        width: 60px;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="logo"> <!-- flex -->
-    <div class="logo-image"> <!-- flex -->
-      <img src="./assets/Logo_circular_com_crisalis.svg" width="80%" height="80%">
+
+  <header>
+    <h1>Studio Crisalis</h1>
+    <nav>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="./assets/Logo_Tagline.svg" alt="Logo Studio Crisalis">
+
+
+    <div class="contatos" id="contatos">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/studiocrisalis" target="_blank">
+        <div class="img-wrapper">
+          <img class="contato-icon" src="assets/3225191_app_instagram_logo_media_popular_icon.png" alt="Instagram">
+        </div>
+      </a>
+
+  
+      <a href="https://api.whatsapp.com/send?phone=5531982669454&text=Ol%C3%A1%2C%20mais%20sobre%20os%20servi%C3%A7os%20da%20Crisalis.%20✨%20" target="_blank">
+        <div class="img-wrapper">
+          <img class="contato-icon" src="assets/3225179_app_logo_media_popular_social_icon.png" alt="WhatsApp">
+        </div>
+      </a>
+
+      <a href="https://drive.google.com/drive/folders/1qKdpoZGe57-HIjIw3sIKUh60bFwZMmMy?usp=sharing" target="_blank" title="Baixar Guia PDF">
+        <div class="img-wrapper">
+          <img class="contato-icon"  alt="Guia PDF">
+        </div>
+      </a>
     </div>
-  </div>
-  <div class="contatos"> <!-- flex -->
-    <a href="https://www.instagram.com/studiocrisalis" target="_blank">
-      <div class="img-wrapper"> <!-- flex -->
-        <img class="contato-icon" src="assets\3225191_app_instagram_logo_media_popular_icon.png">
-      </div>
-    </a>
-    <a href="https://api.whatsapp.com/send?phone=5531982669454&text=Ol%C3%A1%2C%20mais%20sobre%20os%20servi%C3%A7os%20da%20Crisalis.%20✨%20" target="_blank">
-      <div class="img-wrapper"> <!-- flex -->
-        <img class="contato-icon" src="assets\3225179_app_logo_media_popular_social_icon.png">
-      </div>
-    </a>
-  </div>
+  </section>
+
+  <footer>
+    © 2025 Studio Crisalis. Todos os direitos reservados.
+  </footer>
+
 </body>
 </html>
